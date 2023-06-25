@@ -175,6 +175,7 @@ jaccard_index(PG_FUNCTION_ARGS)
   算法分析：时间复杂度为O（n+m）
 </p>
 <br>重新配置编译下载进行测试，结果如下：
+
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/4c164d63-89c3-464f-a10d-17dd491ac730)
 
 <br>生成txt文件
