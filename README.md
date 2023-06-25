@@ -69,8 +69,11 @@ $HOME/pgsql/bin/psql similarity
 - src/include/catalog/pg_proc.h
 <br>注册名字空间，OID需要成为函数的唯一标识不可与其余函数的OID重复，故只要保证与其他OID不同即可，其余参数需要与开头定义的结构体相一致，各个参数的表示内容如下：
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/f88eaca1-6cd7-4332-a81b-6d2f9c34e4a0)
+
 <br>添加内容：
+
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/284bead1-2769-4661-84a0-98e6d47f4d0f)
+
 
 ### levenshtein_distance:
 通过动态规划，用 d[i][j] 表示s1 的前 i 个字母和 S2 的前 j 个字母之间的编辑距离：
@@ -85,8 +88,11 @@ $HOME/pgsql/bin/psql similarity
 初始化数组有O（m+n）的时间复杂度；对于每⼀次计算，复杂度都为 O( m * n )；使⽤静态数组可以免去每次查询时再创建数组的开销。故算法总体时间复杂度为O（m+n）。
 </p>
 <br>进行重新配置编译下载，并进行测试，结果如下：
+
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/32bc5884-1b3c-4b13-a91b-61c36a57d9a3)
+
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/3c620e0d-c13c-47a2-92ff-5020f905ddb7)
+
 <p>输入命令生成txt文件：</p>
 
 ```
@@ -170,8 +176,10 @@ jaccard_index(PG_FUNCTION_ARGS)
 </p>
 <br>重新配置编译下载进行测试，结果如下：
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/4c164d63-89c3-464f-a10d-17dd491ac730)
+
 <br>生成txt文件
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/dbd91172-0399-403a-a9bf-01cbd2afcc3a)
+
 <br>![图片](https://github.com/Indifference061/Similarity-Join/assets/87850383/4ff05f73-a999-43f2-a0b6-3bead5e179fa)
 
 ---
